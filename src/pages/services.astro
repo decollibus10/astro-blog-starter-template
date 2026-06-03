@@ -1,0 +1,195 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="Services — Hermes Agent Ops" description="See our three service tiers: single-workflow pilot, Hermes Proof Package, and Hermes Managed Agent Ops." />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Services</h1>
+			<p class="intro">
+				Every engagement starts with a scoped pilot so you can see real results before
+				committing to ongoing managed operations.
+			</p>
+
+			<div class="service">
+				<div class="service-header">
+					<span class="tier-label">Entry</span>
+					<h2>Single-Workflow Pilot</h2>
+					<p class="price">Scoped per project</p>
+				</div>
+				<p>
+					One workflow — most often a missed-lead recovery agent — scoped, built, and handed off
+					running. Right for businesses that want proof before a larger commitment, or that have
+					a single high-value problem to solve.
+				</p>
+				<h3>What's included</h3>
+				<ul>
+					<li>Discovery call to scope the workflow and agree on success criteria</li>
+					<li>Agent build and testing against your real inquiry data</li>
+					<li>Integration with your existing phone, form, or chat tools</li>
+					<li>30-day monitoring and tuning post-launch</li>
+					<li>Handoff documentation so your team understands how it works</li>
+				</ul>
+			</div>
+
+			<hr />
+
+			<div class="service">
+				<div class="service-header">
+					<span class="tier-label">Proof</span>
+					<h2>Hermes Proof Package</h2>
+					<p class="price">$5,000 / month</p>
+				</div>
+				<p>
+					Three months of managed agent operations across your core lead-capture and follow-up
+					workflows. Weekly reporting, monthly review call, and ongoing tuning. Designed to build
+					a track record before stepping up to full managed ops.
+				</p>
+				<h3>What's included</h3>
+				<ul>
+					<li>Up to two active workflows running simultaneously</li>
+					<li>Weekly performance report (leads captured, recovered, converted)</li>
+					<li>One 30-minute review call per month</li>
+					<li>Ongoing agent tuning and prompt updates</li>
+					<li>Agent Mail inbox management for all active workflows</li>
+					<li>Slack or email access for questions and change requests</li>
+				</ul>
+			</div>
+
+			<hr />
+
+			<div class="service flagship">
+				<div class="service-header">
+					<span class="tier-label flagship-label">Flagship</span>
+					<h2>Hermes Managed Agent Ops</h2>
+					<p class="price">$10,000 / month</p>
+				</div>
+				<p>
+					Full managed service. We build, run, monitor, and improve all of your lead and ops
+					workflows on an ongoing basis. You review the weekly numbers and make judgment calls.
+					We handle everything else.
+				</p>
+				<h3>What's included</h3>
+				<ul>
+					<li>Unlimited active workflows (scoped in monthly roadmap)</li>
+					<li>Weekly performance report with action items</li>
+					<li>Two 30-minute review calls per month</li>
+					<li>Continuous agent monitoring and incident response</li>
+					<li>New workflow design and build as your ops grow</li>
+					<li>Agent Mail inbox management for all workflows</li>
+					<li>Trello pipeline access for sales and delivery visibility</li>
+					<li>Priority Slack access — response within one business hour</li>
+				</ul>
+			</div>
+
+			<hr />
+
+			<section class="cta">
+				<h2>Ready to recover your first missed leads?</h2>
+				<p>
+					The fastest path is a 30-minute discovery call. We'll scope the first workflow,
+					agree on what success looks like, and tell you exactly what we'd build.
+				</p>
+				<a href="mailto:c10decollibus@gmail.com" class="cta-btn">Book a Discovery Call</a>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	h1 {
+		font-size: 2.5em;
+		margin-bottom: 0.3em;
+	}
+	.intro {
+		color: rgb(var(--gray));
+		margin-bottom: 2.5em;
+		font-size: 1.05em;
+	}
+	.service {
+		margin-bottom: 2.5em;
+	}
+	.service-header {
+		margin-bottom: 0.8em;
+	}
+	.service-header h2 {
+		font-size: 1.6em;
+		margin: 0.2em 0;
+	}
+	.tier-label {
+		display: inline-block;
+		font-size: 0.7em;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--accent);
+	}
+	.flagship-label {
+		color: #fff;
+		background: var(--accent);
+		padding: 0.15em 0.5em;
+		border-radius: 3px;
+	}
+	.price {
+		font-weight: 700;
+		font-size: 1.1em;
+		color: rgb(var(--black));
+		margin: 0;
+	}
+	.service h3 {
+		font-size: 1em;
+		margin: 1em 0 0.4em;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: rgb(var(--gray));
+	}
+	.service ul {
+		padding-left: 1.4em;
+	}
+	.service ul li {
+		margin-bottom: 0.3em;
+	}
+	.service.flagship {
+		border: 1px solid var(--accent);
+		border-radius: 8px;
+		padding: 1.5em;
+		background: rgba(35, 55, 255, 0.02);
+	}
+	.cta {
+		text-align: center;
+		padding: 2em 0 1em;
+	}
+	.cta h2 {
+		font-size: 1.5em;
+		margin-bottom: 0.5em;
+	}
+	.cta p {
+		color: rgb(var(--gray));
+		max-width: 500px;
+		margin: 0 auto 1.5em;
+	}
+	.cta-btn {
+		display: inline-block;
+		background: var(--accent);
+		color: #fff;
+		padding: 0.6em 1.6em;
+		border-radius: 4px;
+		text-decoration: none;
+		font-weight: 700;
+	}
+	.cta-btn:hover {
+		background: var(--accent-dark);
+		color: #fff;
+	}
+	hr {
+		margin: 2.5em 0;
+	}
+</style>
