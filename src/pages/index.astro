@@ -13,38 +13,193 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section class="hero">
+				<h1>Stop Losing Leads to Slow Follow-Up</h1>
+				<p class="hero-sub">
+					Hermes Agent Ops runs AI agents that capture inquiries, ask qualifying questions,
+					and follow up with customers — so your team only handles ready-to-close conversations.
+				</p>
+				<a href="/services" class="cta-btn">See What's Included</a>
+			</section>
+
+			<section class="outcomes">
+				<h2>What We Deliver</h2>
+				<ul class="outcome-grid">
+					<li>
+						<strong>Fewer missed calls and form fills</strong>
+						<p>Every inquiry gets captured and acknowledged within minutes, not hours.</p>
+					</li>
+					<li>
+						<strong>Faster quote and appointment follow-up</strong>
+						<p>Agents qualify, summarize, and route leads before your front desk even picks up.</p>
+					</li>
+					<li>
+						<strong>Cleaner owner or front-desk handoffs</strong>
+						<p>You get a concise summary — customer need, qualifying answers, next step — not a raw transcript.</p>
+					</li>
+					<li>
+						<strong>Weekly reporting on recovered leads</strong>
+						<p>Know exactly how many leads were captured, followed up, and converted each week.</p>
+					</li>
+				</ul>
+			</section>
+
+			<section class="offer">
+				<h2>How We Work Together</h2>
+				<div class="offer-grid">
+					<div class="offer-card pilot">
+						<span class="tier">Entry</span>
+						<h3>Single-Workflow Pilot</h3>
+						<p>One scoped AI workflow — usually missed-lead recovery — built and running. Sized for businesses that need proof before a larger commitment.</p>
+						<p class="price">Scoped per project</p>
+					</div>
+					<div class="offer-card proof">
+						<span class="tier">Proof</span>
+						<h3>Hermes Proof Package</h3>
+						<p>Three months of managed agent operations across your core lead-capture and follow-up workflows, with weekly reporting and one monthly review call.</p>
+						<p class="price">$5,000 / month</p>
+					</div>
+					<div class="offer-card flagship">
+						<span class="tier">Flagship</span>
+						<h3>Hermes Managed Agent Ops</h3>
+						<p>Full managed service: ongoing agent build-out, tuning, monitoring, and reporting across all lead and ops workflows. We run it; you review results.</p>
+						<p class="price">$10,000 / month</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="demo">
+				<h2>First Demo: Missed Lead Recovery Agent</h2>
+				<ol>
+					<li>Captures the inquiry from your form, phone transcription, or chat.</li>
+					<li>Asks the customer 2–3 qualifying questions automatically.</li>
+					<li>Sends a concise summary to you or your front desk.</li>
+					<li>Follows up with the customer on a scheduled cadence.</li>
+					<li>Tracks every outcome — answered, booked, lost — so you see real recovery numbers.</li>
+				</ol>
+				<a href="/about" class="cta-link">Learn how it's built →</a>
+			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	.hero {
+		text-align: center;
+		padding: 2em 0 3em;
+		border-bottom: 1px solid rgb(var(--gray-light));
+		margin-bottom: 3em;
+	}
+	.hero h1 {
+		font-size: 2.5em;
+		margin-bottom: 0.5em;
+	}
+	.hero-sub {
+		font-size: 1.1em;
+		color: rgb(var(--gray));
+		max-width: 560px;
+		margin: 0 auto 1.5em;
+	}
+	.cta-btn {
+		display: inline-block;
+		background: var(--accent);
+		color: #fff;
+		padding: 0.6em 1.6em;
+		border-radius: 4px;
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 1em;
+	}
+	.cta-btn:hover {
+		background: var(--accent-dark);
+		color: #fff;
+	}
+	.outcomes,
+	.offer,
+	.demo {
+		margin-bottom: 3em;
+	}
+	.outcomes h2,
+	.offer h2,
+	.demo h2 {
+		font-size: 1.6em;
+		margin-bottom: 1em;
+	}
+	.outcome-grid {
+		list-style: none;
+		padding: 0;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5em;
+	}
+	.outcome-grid li {
+		background: rgb(var(--gray-light), 0.4);
+		border-radius: 6px;
+		padding: 1.2em 1.4em;
+	}
+	.outcome-grid li strong {
+		display: block;
+		margin-bottom: 0.3em;
+	}
+	.outcome-grid li p {
+		margin: 0;
+		font-size: 0.9em;
+		color: rgb(var(--gray));
+	}
+	.offer-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 1.5em;
+	}
+	.offer-card {
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 8px;
+		padding: 1.4em;
+	}
+	.offer-card.flagship {
+		border-color: var(--accent);
+		background: rgba(35, 55, 255, 0.03);
+	}
+	.tier {
+		display: inline-block;
+		font-size: 0.7em;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--accent);
+		margin-bottom: 0.5em;
+	}
+	.offer-card h3 {
+		font-size: 1.1em;
+		margin-bottom: 0.5em;
+	}
+	.offer-card p {
+		font-size: 0.9em;
+		margin-bottom: 0.5em;
+	}
+	.price {
+		font-weight: 700;
+		color: rgb(var(--black));
+	}
+	.demo ol {
+		padding-left: 1.4em;
+	}
+	.demo ol li {
+		margin-bottom: 0.4em;
+	}
+	.cta-link {
+		display: inline-block;
+		margin-top: 1em;
+		font-weight: 700;
+	}
+	@media (max-width: 720px) {
+		.outcome-grid,
+		.offer-grid {
+			grid-template-columns: 1fr;
+		}
+		.hero h1 {
+			font-size: 1.8em;
+		}
+	}
+</style>
